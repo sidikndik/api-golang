@@ -252,3 +252,15 @@ func OK(c *fiber.Ctx, result ...interface{}) error {
 
 	return c.Status(200).JSON(result[0])
 }
+
+// Created send HTTP 201 Created response
+func Created(c *fiber.Ctx, result ...interface{}) error {
+    if len(result) == 0 {
+        result = append(result, Response{
+            Status:  201,
+            Message: "resource created",
+        })
+    }
+
+    return c.Status(201).JSON(result[0])
+}

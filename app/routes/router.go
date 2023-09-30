@@ -2,6 +2,7 @@ package routes
 
 import (
 	"api/app/controller"
+	c "api/app/controller/api"
 	"api/app/services"
 
 	"github.com/gofiber/fiber/v2"
@@ -19,4 +20,10 @@ func Handle(app *fiber.App) {
 
 	api.Get("/", controller.GetAPIIndex)
 	api.Get("/info.json", controller.GetAPIInfo)
+	api.Get("/user", c.GetAllUsers)
+	api.Get("/user/:id", c.GetUserByID)
+	api.Post("/user", c.CreateUser)
+	api.Put("/user/:id", c.UpdateUser)
+	api.Delete("/user/:id", c.DeleteUser)
+
 }
