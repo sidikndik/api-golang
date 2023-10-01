@@ -13,5 +13,3 @@ go tool cover -html cover.txt
 # or
 go tool cover -func cover.txt
 ```
-
-# teset
