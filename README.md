@@ -1,7 +1,5 @@
 # Base Project
 
-[API Specs](https://gospecs.monstercode.net)
-
 Running test:
 ```bash
 docker-compose up test
