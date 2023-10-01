@@ -63,11 +63,3 @@ services:
       go:
         aliases:
           - redis
-  swagger:
-    image: swaggerapi/swagger-ui:latest
-    environment:
-      - URL=/docs/swagger-local.yaml
-    volumes:
-      - ./docs:/usr/share/nginx/html/docs
-    ports:
-      - 8080:8080
